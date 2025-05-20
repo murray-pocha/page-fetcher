@@ -28,7 +28,7 @@ const fetchSave = async function() {
     const dataToWrite = JSON.stringify(response.body, null, 2);   // converting the data to a string.
 
     await fs.writeFile(filePath, dataToWrite);
-    console.log(`Data written to ${filePath} succesfully.`);
+    console.log(`Data written to ${filePath} successfully.`);
   } catch (error) {
     console.error(`Error:`, error.message);
   }
