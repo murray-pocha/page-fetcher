@@ -1,8 +1,10 @@
-# Page Fetcher
+# 📥 Page Fetcher
 
 A simple Node.js script that fetches the contents of a given URL and saves it to a specified local file path. If the destination directory doesn't exist, it will be created automatically.
 
-## Features
+---
+
+## ✨ Features
 
 - Accepts URL and file path as command-line arguments
 - Makes HTTP GET requests using `needle`
@@ -10,43 +12,50 @@ A simple Node.js script that fetches the contents of a given URL and saves it to
 - Automatically creates missing directories
 - Provides helpful status and error messages
 
-## Example Usage
+---
+
+## 🚀 Example Usage
 
 ```bash
 node fetcher.js https://jsonplaceholder.typicode.com/todos/1 ./output/todo.json
-This command will:
+This will:
 
-Fetch the JSON data from the URL
+Fetch JSON data from the URL
 
-Create the output/ folder (if it doesn’t exist)
+Create the output/ folder if it doesn't exist
 
 Write the data into todo.json in that folder
 
-Setup
-
+⚙️ Setup
 Clone the repository
 
-Install dependencies:
+
+git clone https://github.com/your-username/page-fetcher.git
+cd page-fetcher
+Install dependencies
 
 npm install needle
-Run the script using Node.js (v14+ recommended)
+Run the script
 
-File Structure
+node fetcher.js <URL> <file-path>
+❗ Do not include angle brackets (< >). Example:
 
+
+node fetcher.js https://example.com ./data/site.html
+
+📁 File Structure
 
 page-fetcher/
-├── fetcher.js       # Main script file
+├── fetcher.js       # Main script
 ├── output/          # Example output directory
 └── README.md        # Project documentation
 
+📦 Dependencies
+needle — HTTP client for making requests
 
-Dependencies
-needle – HTTP client for making requests
+fs/promises — Node.js built-in for file system operations
 
-Built-in fs/promises – File system operations
+📝 Notes
+Ensure both the URL and file path are provided or the script will exit with usage instructions.
 
-Notes
-
-Ensure both URL and file path are provided or the script will exit with usage instructions.
-
-The script only checks for status code 200 as a success.
+The script only treats HTTP status 200 as a success.
